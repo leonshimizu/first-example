@@ -33,8 +33,10 @@
       <p v-bind:class="{ disabled: displayInfo} ">Extra Extra Information</p>
     </div>
     <hr>
-    <div v-for="fruit in fruits">
-      {{ fruit }}
+    <div>
+      <ol>
+        <li v-for="fruit in fruits">{{ fruit }}</li>
+      </ol>
     </div>
     <br>
     <div>
