@@ -18,8 +18,11 @@ var app = new Vue({
   methods: {
     reverseMessage: function() {
       this.message = this.message.split("").reverse().join("");
+    },
+    allCaps: function() {
+      this.message = this.message.toUpperCase();
     }
-  },
+  }
 });
 
 // Vue.component('todo-item', {

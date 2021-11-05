@@ -12,6 +12,7 @@
   <div id="app">
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
+    <button v-on:click="allCaps">All Caps</button>
     <input v-model="message">
     <ol>
       <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
