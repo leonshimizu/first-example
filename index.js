@@ -25,6 +25,21 @@ var app = new Vue({
   }
 });
 
+var app2 = new Vue({
+  el: "#app-2",
+  data: {
+    first: "",
+    second: "",
+    third: "",
+    answer: ""
+  },
+  methods: {
+    sum: function() {
+      var calculatedSum = parseInt(this.first) + parseInt(this.second) + parseInt(this.third);
+      this.answer = calculatedSum;
+    }
+  }
+});
 // Vue.component('todo-item', {
 //   props: ['todo'],
 //   template: '<li>{{ todo.text }}</li>'

@@ -19,6 +19,14 @@
     </ol>
   </div>
 
+  <div id="app-2">
+    <div>1st number: <input v-model="first" type="text"></div>
+    <div>2nd number: <input v-model="second" type="text"></div>
+    <div> 3rd number: <input v-model="third" type="text"></div>
+    <button v-on:click="sum">Calulate Sum</button>
+    <p>The sum is: {{ answer }}</p>
+  </div>
+
 </body>
 
 </html>
