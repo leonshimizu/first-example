@@ -86,6 +86,7 @@ var app3 = new Vue({
   data: {
     guess: "",
     message: "Secret Message",
-    correctGuss: false
+    correctGuss: false,
+    almost: "So close, what's the password???"
   }
 });

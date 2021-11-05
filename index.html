@@ -20,31 +20,43 @@
     <button v-on:click="reverseMessage">Reverse Message</button>
     <button v-on:click="allCaps">All Caps</button>
     <input v-model="message">
+
+    <hr>
+
     <ol>
       <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
     </ol>
 
     <hr>
+
     <div>
       <button v-on:click="toggleInfo">Toggle Info</button>
       <p v-if="showInfo">Extra Information</p>
       <br>
+
       <hr>
+
       <input type="checkbox" v-on:click="something">
       <p v-bind:class="{ disabled: displayInfo} ">Extra Extra Information</p>
     </div>
+
     <hr>
+
     <div>
       <ol>
         <li v-for="fruit in fruits">{{ fruit }}</li>
       </ol>
     </div>
+
     <br>
+
     <div>
       <input type="text" v-model="newFruit">
       <button v-on:click="addFruit">Add New Fruit</button>
     </div>
+
     <hr>
+
     <div v-for="todo in todos">
       <p>{{ todo.title }}</p>
     </div>
@@ -69,9 +81,12 @@
     <p>The product is: {{ calculatedProduct }}</p>
   </div>
 
+  <hr>
+
   <div id="app-3">
     <h3>Guess a word here:</h3>
     <p v-if="guess === 'password'"> {{ message }} </p>
+    <p v-else-if="guess === 'secret'">{{ almost }}</p>
     <input type="text" v-model="guess">
     <p>Guess right and the secret message will be displayed...</p>
   </div>
