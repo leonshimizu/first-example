@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Practice Vue.js</title>
+  <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <h1>Hello from HTML!</h1>
+  <div id="app">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+    <input v-model="message">
+    <ol>
+      <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+    </ol>
+  </div>
+
+</body>
+
+</html>
