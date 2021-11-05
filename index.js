@@ -15,7 +15,13 @@ var app = new Vue({
       { id: 2, text: 'Chicken' }
     ],
     showInfo: false,
-    displayInfo: false
+    displayInfo: false,
+    fruits: [
+      'mango',
+      'cherry',
+      'pineapple'
+    ],
+    newFruit: ""
   },
   methods: {
     reverseMessage: function() {
@@ -31,6 +37,10 @@ var app = new Vue({
     something: function() {
       console.log("something");
       this.displayInfo = !this.displayInfo;
+    },
+    addFruit: function() {
+      console.log("adding fruit");
+      this.fruits.push(this.newFruit);
     }
   }
 });
