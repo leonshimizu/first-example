@@ -5,6 +5,11 @@
   <title>Practice Vue.js</title>
   <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="index.js" defer></script>
+  <style>
+    .disabled {
+      color: LightGrey;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,7 +30,7 @@
       <br>
       <hr>
       <input type="checkbox" v-on:click="something">
-      <p v-if="displayInfo">Extra Extra Information</p>
+      <p v-bind:class="{ disabled: displayInfo} ">Extra Extra Information</p>
     </div>
   </div>
 

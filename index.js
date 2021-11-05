@@ -26,11 +26,6 @@ var app = new Vue({
     },
     toggleInfo: function() {
       console.log("toggling info");
-      // if (this.showInfo === false) {
-      //   this.showInfo = true;
-      // } else {
-      //   this.showInfo = false;
-      // }
       this.showInfo = !this.showInfo;
     },
     something: function() {
