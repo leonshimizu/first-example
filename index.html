@@ -69,6 +69,13 @@
     <p>The product is: {{ calculatedProduct }}</p>
   </div>
 
+  <div id="app-3">
+    <h3>Guess a word here:</h3>
+    <p v-if="guess === 'password'"> {{ message }} </p>
+    <input type="text" v-model="guess">
+    <p>Guess right and the secret message will be displayed...</p>
+  </div>
+
 </body>
 
 </html>
