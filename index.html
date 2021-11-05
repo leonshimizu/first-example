@@ -8,6 +8,7 @@
   <style>
     .disabled {
       color: LightGrey;
+      background-color: black;
     }
   </style>
 </head>
@@ -53,11 +54,19 @@
   <br>
 
   <div id="app-2">
-    <div>1st number: <input v-model="first" type="text"></div>
-    <div>2nd number: <input v-model="second" type="text"></div>
-    <div> 3rd number: <input v-model="third" type="text"></div>
+    <div>1st number: <input v-model="firstSum" type="text"></div>
+    <div>2nd number: <input v-model="secondSum" type="text"></div>
+    <div>3rd number: <input v-model="thirdSum" type="text"></div>
     <button v-on:click="sum">Calulate Sum</button>
-    <p>The sum is: {{ answer }}</p>
+    <p>The sum is: {{ calculatedSum }}</p>
+
+    <hr>
+
+    <div>1st number: <input v-model="firstProduct" type="text"></div>
+    <div>2nd number: <input v-model="secondProduct" type="text"></div>
+    <div>3rd number: <input v-model="thirdProduct" type="text"></div>
+    <button v-on:click="product">Calculate Product</button>
+    <p>The product is: {{ calculatedProduct }}</p>
   </div>
 
 </body>

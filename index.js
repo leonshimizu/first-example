@@ -62,15 +62,21 @@ var app = new Vue({
 var app2 = new Vue({
   el: "#app-2",
   data: {
-    first: "",
-    second: "",
-    third: "",
-    answer: ""
+    firstSum: "",
+    secondSum: "",
+    thirdSum: "",
+    calculatedSum: "",
+    firstProduct: "",
+    secondProduct: "",
+    thirdProduct: "",
+    calculatedProduct: ""
   },
   methods: {
     sum: function() {
-      var calculatedSum = parseInt(this.first) + parseInt(this.second) + parseInt(this.third);
-      this.answer = calculatedSum;
+      this.calculatedSum = parseInt(this.firstSum) + parseInt(this.secondSum) + parseInt(this.thirdSum);
+    },
+    product: function() {
+      this.calculatedProduct = parseInt(this.firstProduct) * parseInt(this.secondProduct) * parseInt(this.thirdProduct);
     }
   }
 });
