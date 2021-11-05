@@ -14,7 +14,8 @@ var app = new Vue({
       { id: 1, text: 'Mango' },
       { id: 2, text: 'Chicken' }
     ],
-    showInfo: false
+    showInfo: false,
+    displayInfo: false
   },
   methods: {
     reverseMessage: function() {
@@ -31,6 +32,10 @@ var app = new Vue({
       //   this.showInfo = false;
       // }
       this.showInfo = !this.showInfo;
+    },
+    something: function() {
+      console.log("something");
+      this.displayInfo = !this.displayInfo;
     }
   }
 });
