@@ -1,4 +1,4 @@
-/* global Vue */
+/* global Vue, axios */
 
 Vue.component('todo-item', {
   props: ['todo'],
@@ -90,3 +90,21 @@ var app3 = new Vue({
     almost: "So close, what's the password???"
   }
 });
+
+var app4 = new Vue({
+  el: "#app-4",
+  data: {
+    todos: []
+  },
+  methods: {
+    loadTodos: function() {
+      console.log("in the load todos function"); 
+      axios
+        .get('https://jsonplaceholder.typicode.com/todos')
+        .then(response => {
+          console.log(response.data);
+          this.todos = response.data;
+        });
+    }
+  }
+}); 
