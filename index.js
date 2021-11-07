@@ -105,6 +105,17 @@ var app4 = new Vue({
           console.log(response.data);
           this.todos = response.data;
         });
+    },
+    createTodo: function() {
+      console.log("creating todo...");
+      axios.post('https://jsonplaceholder.typicode.com/todos', {
+        userId: 4,
+        title: "go to the store",
+        completed: false
+      }).then(response => {
+        console.log(response.data);
+        this.todos.push(response.data);
+      });
     }
   },
   created: function () {
