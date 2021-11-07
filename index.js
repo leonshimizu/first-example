@@ -106,5 +106,11 @@ var app4 = new Vue({
           this.todos = response.data;
         });
     }
-  }
+  },
+  created: function () {
+    this.loadTodos();
+  },
+  // mounted: function() { // both this and created do the same things in this scenario
+  //   this.loadTodos();
+  // }
 }); 

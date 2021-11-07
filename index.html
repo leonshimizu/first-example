@@ -90,14 +90,14 @@
   <hr>
 
   <div id="app-4">
-    <button v-on:click="loadTodos">Load Todos</button>
-    <div>
-      <ol>
-        <li v-for="todo in todos">
-          {{ todo }}
-        </li>
-      </ol>
-    </div>
+    <!-- <button v-on:click="loadTodos">Load Todos</button> -->
+    <!-- <button v-on:mouseover="loadTodos">Load Todos</button> -->
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.title }}
+      </li>
+    </ol>
+  </div>
   </div>
 </body>
 
